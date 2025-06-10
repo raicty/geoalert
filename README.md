@@ -28,8 +28,9 @@ GeoAlert is a full-stack web application that allows users to create, visualize,
 geoalert/
 │
 ├── backend/
-│   └── venv/            # Python virtual environment & FastAPI backend
-│       └── main.py      # FastAPI app with CORS and zone endpoint
+│   ├── main.py           # FastAPI app with CORS and zone endpoint
+│   ├── requirements.txt  # Backend dependencies
+│   └── venv/             # Python virtual environment
 │
 ├── client/
 │   ├── public/
@@ -50,21 +51,23 @@ geoalert/
 ### 1. Clone the repository
 
 ```sh
-git clone https://github.com/your-username/geoalert.git
+git clone https://github.com/your-github-username/geoalert.git
 cd geoalert
 ```
 
 ### 2. Start the Backend (FastAPI)
 
 ```sh
-cd backend/venv
+cd backend
 # Activate your Python virtual environment if needed
 # For Windows:
-# .\Scripts\activate
+# python -m venv venv
+# .\venv\Scripts\activate
 # For Unix/Mac:
-# source bin/activate
+# python3 -m venv venv
+# source venv/bin/activate
 
-pip install fastapi uvicorn
+pip install -r requirements.txt
 uvicorn main:app --reload
 ```
 - The backend will run at [http://127.0.0.1:8000](http://127.0.0.1:8000)
@@ -73,17 +76,17 @@ uvicorn main:app --reload
 ### 3. Start the Frontend (React)
 
 ```sh
-cd ../../client
+cd ../client
 npm install
 npm start
 ```
-- The frontend will run at [http://localhost:3002](http://localhost:3002)
+- The frontend will run at [http://localhost:3000](http://localhost:3000)
 
 ---
 
 ## 🗺️ Usage
 
-1. Open [http://localhost:3002](http://localhost:3002) in your browser.
+1. Open [http://localhost:3000](http://localhost:3000) in your browser.
 2. Enter a zone name.
 3. Click on the map to draw a polygon (at least 3 points).
 4. Click **Submit Zone** to save your zone.
@@ -131,7 +134,7 @@ This project is licensed under the MIT License.
 
 ## 🙋‍♂️ Author
 
-- [Your Name](https://github.com/your-username)
+- [Rai Chakraborty](https://github.com/raicty)
 
 ---
 

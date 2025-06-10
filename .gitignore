@@ -1,28 +1,14 @@
-# Node.js
-node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
 # Python
-venv/
 __pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-
-# Environment variables
+*.pyc
+venv/
 .env
-.env.*
 
-# VSCode
-.vscode/
-
-# OS files
-.DS_Store
-Thumbs.db
-
-# Build output
+# Node
+node_modules/
 build/
 dist/
-coverage/
+
+# OS
+.DS_Store
+Thumbs.db
