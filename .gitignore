@@ -1,14 +1,10 @@
-# Python
+# Ignore Python & Node modules globally if needed
+*.log
 __pycache__/
-*.pyc
-venv/
+*.py[cod]
+*.env
 .env
 
-# Node
-node_modules/
-build/
-dist/
-
-# OS
+# Mac and system files
 .DS_Store
 Thumbs.db
